@@ -1,0 +1,136 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scripts/Inventory.gd" type="Script" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://Inventory/black.png" type="Texture" id=3]
+[ext_resource path="res://hand.png" type="Texture" id=5]
+
+[sub_resource type="StreamTexture" id=1]
+flags = 4
+load_path = "res://.import/arrow.png-9a52328c9c8f79a188b7fabb13b1f3fc.stex"
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="InventoryContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -50.0
+alignment = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="InventoryContainer"]
+margin_top = 470.0
+margin_right = 1024.0
+margin_bottom = 550.0
+custom_constants/separation = 13
+alignment = 1
+
+[node name="SlotContainer" type="ColorRect" parent="InventoryContainer/HBoxContainer"]
+margin_left = 286.0
+margin_right = 366.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 80, 80 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="Slot" type="TextureButton" parent="InventoryContainer/HBoxContainer/SlotContainer" groups=["slots"]]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 5.0
+margin_right = -5.0
+margin_bottom = -5.0
+texture_normal = ExtResource( 3 )
+expand = true
+
+[node name="SlotContainer2" type="ColorRect" parent="InventoryContainer/HBoxContainer"]
+margin_left = 379.0
+margin_right = 459.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 80, 80 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="Slot" type="TextureButton" parent="InventoryContainer/HBoxContainer/SlotContainer2" groups=["slots"]]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 5.0
+margin_right = -5.0
+margin_bottom = -5.0
+texture_normal = ExtResource( 3 )
+expand = true
+
+[node name="SlotContainer3" type="ColorRect" parent="InventoryContainer/HBoxContainer"]
+margin_left = 472.0
+margin_right = 552.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 80, 80 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="Slot" type="TextureButton" parent="InventoryContainer/HBoxContainer/SlotContainer3" groups=["slots"]]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 5.0
+margin_right = -5.0
+margin_bottom = -5.0
+texture_normal = ExtResource( 3 )
+expand = true
+
+[node name="SlotContainer4" type="ColorRect" parent="InventoryContainer/HBoxContainer"]
+margin_left = 565.0
+margin_right = 645.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 80, 80 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="Slot" type="TextureButton" parent="InventoryContainer/HBoxContainer/SlotContainer4" groups=["slots"]]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 5.0
+margin_right = -5.0
+margin_bottom = -5.0
+texture_normal = ExtResource( 3 )
+expand = true
+
+[node name="SlotContainer5" type="ColorRect" parent="InventoryContainer/HBoxContainer"]
+margin_left = 658.0
+margin_right = 738.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 80, 80 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="Slot" type="TextureButton" parent="InventoryContainer/HBoxContainer/SlotContainer5" groups=["slots"]]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 5.0
+margin_right = -5.0
+margin_bottom = -5.0
+texture_normal = ExtResource( 3 )
+expand = true
+
+[node name="movable_item" type="TextureButton" parent="." groups=["items"]]
+rect_min_size = Vector2( 100, 100 )
+texture_normal = ExtResource( 2 )
+expand = true
+
+[node name="movable_item2" type="TextureButton" parent="." groups=["items"]]
+margin_left = 396.0
+margin_top = 70.0
+margin_right = 496.0
+margin_bottom = 170.0
+rect_min_size = Vector2( 100, 100 )
+texture_normal = SubResource( 1 )
+expand = true
+
+[node name="movable_item3" type="TextureButton" parent="." groups=["items"]]
+margin_left = 164.0
+margin_top = 6.0
+margin_right = 264.0
+margin_bottom = 106.0
+rect_min_size = Vector2( 100, 100 )
+texture_normal = ExtResource( 5 )
+expand = true
